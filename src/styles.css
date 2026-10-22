@@ -1,0 +1,38 @@
+/* Ajustes globais pequenos; o restante do visual vem do tema do Mantine. */
+:root {
+  /* Cor das barras dos gráficos (validada: contraste ≥ 3:1 sobre a superfície) */
+  --chart-bar: #b63a45;
+}
+[data-mantine-color-scheme='dark'] {
+  --chart-bar: #d9555f;
+}
+
+body {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Linhas clicáveis da tabela de missões */
+.row-clickable {
+  cursor: pointer;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+@media (min-width: 62em) {
+  .login-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(440px, 1fr);
+  }
+}
+
+/* Painel da marca na tela de login */
+.login-brand {
+  background:
+    radial-gradient(ellipse 70% 60% at 85% 85%, rgba(182, 58, 69, 0.45), transparent 70%),
+    linear-gradient(rgba(182, 58, 69, 0.14) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(182, 58, 69, 0.14) 1px, transparent 1px) 0 0 / 28px 28px,
+    #050505;
+  color: #fdfaf6;
+}
